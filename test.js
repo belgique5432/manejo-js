@@ -30,6 +30,25 @@ async function main() {
     let id2 = await contenedor.save(item2)
     log(id2)
 
+    let datos2 = await contenedor.getAll()
+    log(datos2)
+
+    let busca1 = await contenedor.getById(1)
+    log(busca1)
+
+    let busca2 = await contenedor.getById(10)
+    log(busca2)
+
+    await contenedor.deleteById(1)
+    let delete1 = await contenedor.getAll()
+    log(delete1)
+
+    
+    await contenedor.deleteAll()
+    let delete2 = await contenedor.getAll()
+    log(delete2)
+
+
 }
 
 main()
